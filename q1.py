@@ -2,9 +2,9 @@ from maskpass import * #for hide number by coder (run in terminal pip install ma
 print("Hey Coder...!")
 while True:
     try:
-        num =askpass(prompt="Enter a valid four digit number:", mask=" #")
+        num =askpass(prompt="Enter 4 digit number with all different digits :", mask=" *")
         coder_list = [int(x) for x in str(num)]
-        if (len(coder_list) == 4):
+        if (len(coder_list) == 4) and (coder_list[0] != coder_list[1] != coder_list[2] != coder_list[3]):
             break
     except:
         pass
